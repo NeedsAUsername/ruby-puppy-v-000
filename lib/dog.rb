@@ -1,7 +1,9 @@
 class Dog
-    attr_accessor
+    attr_accessor :name
 
-    def initialize
+    def initialize(name)
+        @name = name
+        @@all << self
     end
 
     @@all = []
@@ -9,4 +11,11 @@ class Dog
     def self.clear_all
         @@all = []
     end
+
+    def self.all
+        @@all.each do |dog|
+            puts dog
+        end
+    end
+
 end
