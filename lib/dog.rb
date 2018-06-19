@@ -6,7 +6,7 @@ class Dog
 
     @@all = []
 
-    def clear_all
+    def self.clear_all
         @@all = []
-    end 
+    end
 end
